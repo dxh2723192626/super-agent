@@ -1,5 +1,19 @@
 # dsh-superagent
 
+> 本文档其余部分为英文；以下是中文项目简介。The rest of this document is in English.
+
+## 中文简介
+
+dsh-superagent 是一个面向单个 GitHub 仓库的主动式编码智能体，以 [DeepSeek Harness](https://www.deepseek.com/en/harness/) 的 bundle 形式打包。它监听 GitHub 以及（可选）Feishu 消息：当被授权的人向它请求工作时，它会创建一个工作项，在自己的智能体会话与目录中独立完成工作，并在原始对话中回复结果（例如一个 pull request）。Web 面板会展示需要人工介入的事项。
+
+这也是一种与智能体协作的方式：**尽可能少占用人的注意力，同时尽可能多产出价值。** 一个能为整个团队行动的智能体，同样可能浪费整个团队的注意力。因此，它只会在被要求、或团队编写的规则允许时采取行动，并且只在有人必须行动、或能直接使用某个结果时才发言。[docs/000-philosophy.md](docs/000-philosophy.md) 阐述了这一原则及其对运维者的要求。
+
+> **仅供研究参考的原型，并非 DeepSeek 官方产品。** 这段代码源自我们团队的日常开发工作，其中大量工程实现由编码智能体完成。请将其视为研究代码而非生产级软件：它可能仍存在 bug，代码风格与工程实践也可能并不统一。在你自己的环境中使用前，请先审查并适配。
+>
+> 我们已为公开发布做了适配，因此它与我们的内部版本以及《Exploring Super-agent Design: Towards a More Autonomous Agent System》一文中所描述的实现并不完全一致。文中讨论的部分设计是未来的发展方向，尚未在该原型中实现。
+
+---
+
 > **Research prototype for reference only, not an official DeepSeek product.** This code grew out of our team's day-to-day development work, with much of the engineering done by coding agents. Treat it as research code, not production-ready software. It may still contain bugs, and its coding style and engineering practices may be inconsistent. Review and adapt it before using it in your own environment.
 >
 > We have adapted it for publication, so it is not identical to our internal version or the implementation described in *Exploring Super-agent Design: Towards a More Autonomous Agent System*. Some designs discussed in the article are directions for future development and are not implemented in this prototype.
